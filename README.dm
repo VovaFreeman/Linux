@@ -1,4 +1,8 @@
-ctave in cygwin.
+Some hard links to scripts and configs of mine.
+
+Bellow some blueprints for posts.
+
+ctave in cygwin
 qemu
 Headphones soldering
 Filezilla
@@ -8,7 +12,7 @@ PS Set-NetConnectionProfile
 Get rid of br tag: &#13;
 
 
-Nvidia on vnc:
+#Nvidia on vnc:
 Ubuntu-drivers devices
 Apt-install <314 (no depens)
 Version on site
@@ -30,7 +34,9 @@ Xprop PULSE_SERVER
 
 Nvidia Virtual display xeandr --fb 600x800
 
-Firefox ui.osk.enabled false
+#Firefox about:config
+ ui.osk.enabled false
+ browser.backspase action 0
 
 #Lvm  boot repair 
 Boot livecd
