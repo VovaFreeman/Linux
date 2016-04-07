@@ -27,12 +27,16 @@ X11vnc --usepwd
 I3
 termit
 Dconf-tools
-Padevchooser
 Sudo addgroup ubintu audio
 Xset -dpms
 Xprop PULSE_SERVER
 
 Nvidia Virtual display xeandr --fb 600x800
+
+#sounds
+apt install padevchooser
+vim /etc/pulse/default.pa //(cache sounds & load modules)
+i3 bindsym pactl //(fn sound)
 
 #Firefox about:config
  ui.osk.enabled false
@@ -148,9 +152,6 @@ Rsync -avzcP --update -e ssh SOURCE DESTINATION
 Lsmod | grep uvnvideo
 Cheese
 Adduser -a -G video
-
-#fn audio
-Bindsym pactl
 
 #printscreen
 Imagemagic
