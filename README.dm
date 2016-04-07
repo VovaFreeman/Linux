@@ -78,10 +78,12 @@ Locale
 
 vim /etc/defaults/keyboard
 
-apt install xfonts-intl-european
+apt install xfonts-intl-european culmus 
 Xmodmap -pke
 xev
 
+#for Hebrew
+search web for HebrewLocalizationHowto
 
 #Grub4dos
 Console mount /cdrom
