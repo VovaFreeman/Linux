@@ -172,6 +172,10 @@ exec --no-startup-id "export LANG=en_US.UTF-8"
 exec --no-startup-id "export LANGUAGE=en_US.UTF-8"
 exec --no-startup-id "export LC_ALL=en_US.UTF-8"
 
+#assignations
+assign [class="Firefox"]2
+assign [class="Skype$"]3
+
 #autostart
 exec padevchooser
 exec --no-startup-id "echo 0 > /sys/devices/platform/sony-laptop/kbd_backlight"

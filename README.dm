@@ -34,7 +34,7 @@ Xprop PULSE_SERVER
 Nvidia Virtual display xeandr --fb 600x800
 
 #sounds
-apt install padevchooser
+apt install padevchooser sound-theme-freedesktop
 vim /etc/pulse/default.pa //(cache sounds & load modules)
 i3 bindsym pactl //(fn sound)
 
