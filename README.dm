@@ -29,7 +29,8 @@ termit
 Dconf-tools
 Sudo addgroup ubintu audio
 Xset -dpms
-Xprop PULSE_SERVER
+Xprop -root -f PULSE_SERVER 8s -set PULSE_SERVER ipOrName
+pax11publish -e -S ipOrName
 
 Nvidia Virtual display xeandr --fb 600x800
 
@@ -109,7 +110,7 @@ Wpa_passphrase > conf
 scan_ssid=1 # only needed if your access point uses a hidden ssid
 pairwise=CCMP #for AES auth
 Vim /etc/network/interfaces
-Allow-hotplug wlan0
+Allow-hotplug wlan0 //No 60 sec sleep on boot
 Iface wlan0 inet dhcp
 wpa-conf /etc/wpa_supplicant/.conf
 
