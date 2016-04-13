@@ -154,8 +154,8 @@ load-module module-filter-apply
 ### Load X11 bell module
 load-module module-x11-bell sample=x11-bell
 
-## Register ourselves in the X11 session manager
-load-module module-x11-xsmp
+### Register ourselves in the X11 session manager
+#load-module module-x11-xsmp
 
 ## Publish connection data in the X11 root window
 .ifexists module-x11-publish.so

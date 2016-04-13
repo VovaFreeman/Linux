@@ -165,4 +165,5 @@ Dpkg-reconfigure tzdata
 #youtube
 W3m 3rd browser: sh -c 'printf %s "$0" | youtube-dl -cf worst -o "~/%(title)s-%(id)s.%(ext)s" -a -'
 
-
+#system monitor 
+conky

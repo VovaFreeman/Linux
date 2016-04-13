@@ -178,6 +178,7 @@ assign [class="Skype$"]3
 
 #autostart
 exec padevchooser
+exec --no-startup-id conky
 exec --no-startup-id "echo 0 > /sys/devices/platform/sony-laptop/kbd_backlight"
 exec --no-startup-id "echo 0 > /sys/devices/platform/sony-laptop/touchpad"
 exec --no-startup-id "echo 80 >  /sys/devices/platform/sony-laptop/battery_care_limiter"
