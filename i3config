@@ -20,6 +20,9 @@ font -misc-fixed-bold-r-normal--13-120-75-75-C-70-iso10646-1
 # chose a FreeType font, such as:
 # font pango:DejaVu Sans Mono 10
 
+#mouse
+focus_follows_mouse no
+
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
@@ -30,11 +33,11 @@ bindsym $mod+Return exec uxterm
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec dmenu_run
+#bindsym $mod+d exec dmenu_run
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
-# bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
+ bindsym $mod+d exec --no-startup-id "i3-dmenu-desktop --dmenu='dmenu -i -b -p exec'"
 
 # change focus
 bindsym $mod+j focus left
@@ -147,7 +150,13 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
         status_command i3status
+	colors {
+		focused_workspace "#33cc33" "#333333" "#cccccc"
+	}
 }
+
+#colors
+client.focused #335335 #335335 #cccccc #33cc33 #333553
 
 #make printscreen
 bindsym --release Print exec --no-startup-id "import -window $(xwininfo | awk '/.*Window id:.*/ {print $4}') /home/ubuntu/Downloads/Screenshot$(date +%F%H:%M:%S).png"
@@ -182,3 +191,4 @@ exec --no-startup-id conky
 exec --no-startup-id "echo 0 > /sys/devices/platform/sony-laptop/kbd_backlight"
 exec --no-startup-id "echo 0 > /sys/devices/platform/sony-laptop/touchpad"
 exec --no-startup-id "echo 80 >  /sys/devices/platform/sony-laptop/battery_care_limiter"
+

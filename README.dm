@@ -185,4 +185,14 @@ rm tbname.sql*
 #UI gtk colors
 install lxappearance
 vim /usr/share/themes/NAME/gtk-*
+GtkWidget::link-color
+GtkWidget::visited-link-color
+
 for skype: install gtk2-engine:i386
+
+#Video & Imaging
+gimp
+inkscape
+blender
+lives
+feh
