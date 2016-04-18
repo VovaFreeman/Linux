@@ -167,3 +167,22 @@ W3m 3rd browser: sh -c 'printf %s "$0" | youtube-dl -cf worst -o "~/%(title)s-%(
 
 #system monitor 
 conky
+
+#xdg-open
+xdg-mime query filetype FILE
+/etc/mailcap
+mimetype
+
+
+#MySQL fast replace http to https
+mysqldump dbname tbname > tbname.sql
+cp tbname.sql tbname.sqlBAK
+sed -i 's/http:/https:/g' ./tbname.sql
+grep -i http: ./tbname.sql
+mysql dbname < tbname.sql
+rm tbname.sql*
+
+#UI gtk colors
+install lxappearance
+vim /usr/share/themes/NAME/gtk-*
+for skype: install gtk2-engine:i386
