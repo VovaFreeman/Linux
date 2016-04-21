@@ -196,3 +196,14 @@ inkscape
 blender
 lives
 feh
+
+
+#QEMU
+install virt-* 
+kvm-spice
+libvirtd
+adduser `id -un` kvm+libvirtd 
+
+#xterm fonts
+lsof | grep -i xterm
+fc-match mono

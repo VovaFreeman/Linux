@@ -37,7 +37,7 @@ bindsym $mod+Shift+q kill
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
- bindsym $mod+d exec --no-startup-id "i3-dmenu-desktop --dmenu='dmenu -i -b -p exec'"
+ bindsym $mod+d exec --no-startup-id "i3-dmenu-desktop --dmenu='dmenu -i -b -sb #335335 -p exec'"
 
 # change focus
 bindsym $mod+j focus left
@@ -64,7 +64,7 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-bindsym $mod+c split h
+#bindsym $mod+c split h
 
 # split in vertical orientation
 bindsym $mod+v split v
@@ -151,12 +151,13 @@ bindsym $mod+r mode "resize"
 bar {
         status_command i3status
 	colors {
-		focused_workspace "#33cc33" "#333333" "#cccccc"
+		focused_workspace "#33cc33" "#335335" "#cccccc"
 	}
 }
 
 #colors
-client.focused #335335 #335335 #cccccc #33cc33 #333553
+client.focused #335335 #335335 #cccccc #33cc33 #335335
+client.background #000000
 
 #make printscreen
 bindsym --release Print exec --no-startup-id "import -window $(xwininfo | awk '/.*Window id:.*/ {print $4}') /home/ubuntu/Downloads/Screenshot$(date +%F%H:%M:%S).png"
@@ -176,10 +177,12 @@ bindsym XF86MonBrightnessUp exec --no-startup-id "echo 1 > /sys/devices/platform
 #turn off the screen
 bindsym --release $mod+h exec --no-startup-id "xset dpms force suspend"
 
-#User defined xsession files heve not been creared 
-exec --no-startup-id "export LANG=en_US.UTF-8"
-exec --no-startup-id "export LANGUAGE=en_US.UTF-8"
-exec --no-startup-id "export LC_ALL=en_US.UTF-8"
+#lock the screen
+#3lock -i <(import -window root - | convert -blur -0x5 - png:-)
+#bindsym $mod+c exec --no-startup-id "i3lock -i <(import -window root - | png:- )"
+
+#file manager
+bindsym Control+Escape exec "doublecmd"
 
 #assignations
 assign [class="Firefox"]2
