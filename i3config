@@ -159,6 +159,10 @@ bar {
 client.focused #335335 #335335 #cccccc #33cc33 #335335
 client.background #000000
 
+#zoom
+bindsym $mod+plus exec --no-startup-id "xrandr --output VGA-0 --scale 0.5x0.5 --panning 1440x900"
+bindsym $mod+minus exec --no-startup-id "xrandr --output VGA-0 --scale 1x1"
+
 #make printscreen
 bindsym --release Print exec --no-startup-id "import -window $(xwininfo | awk '/.*Window id:.*/ {print $4}') /home/ubuntu/Downloads/Screenshot$(date +%F%H:%M:%S).png"
 
@@ -187,6 +191,7 @@ bindsym Control+Escape exec "doublecmd"
 #assignations
 assign [class="Firefox"]2
 assign [class="Skype$"]3
+assign [class="Eclipse"]5
 
 #autostart
 exec padevchooser

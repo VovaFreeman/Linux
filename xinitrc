@@ -17,8 +17,7 @@ export LC_ALL=en_US.UTF-8
 
 
 #make Qt use the GTK theme
-export QT_STYLE_OVERRIDE="gtk"
-export DESKTOP_SESSION="gnome"
+export QT_STYLE_OVERRIDE="GTK+"
 
 #background picture
 feh --bg-scale /etc/X11/bg.png

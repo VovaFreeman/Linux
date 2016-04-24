@@ -80,6 +80,7 @@ Keyboard-configuration
 Console-cyrillic
 Console-setup
 Locale
+tput rmm //if needed
 
 vim /etc/defaults/keyboard
 
@@ -207,3 +208,7 @@ adduser `id -un` kvm+libvirtd
 #xterm fonts
 lsof | grep -i xterm
 fc-match mono
+
+#Qt uses GTK theme
+export QT_STYLE_OVERRIDE=GTK+
+echo "style=GTK+" >> /etc/xdg/TrollTech.conf
