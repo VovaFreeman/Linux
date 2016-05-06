@@ -1,6 +1,6 @@
-Some hard links to scripts and configs of mine.
+Repo for hard links to scripts and configs of mine.
 
-Bellow some blueprints for posts.
+Bellow are notes and blueprints for posts.
 
 ctave in cygwin
 qemu
@@ -204,6 +204,10 @@ install virt-*
 kvm-spice
 libvirtd
 adduser `id -un` kvm+libvirtd 
+adduser libvirt-qemu audio
+echo -e "\x55\xaa" | dd bs=1 count=2 seek=510 of=... conv=notrunc //for Windows 10 or Android on a clean image
+wget OVMF.fd  from tianocore.org  to  /usr/share/qemu/  //UEFI bios and it DOES require the 55aa record in the begining of an image.
+video=QXL
 
 #xterm fonts
 lsof | grep -i xterm
