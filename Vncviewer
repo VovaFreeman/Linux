@@ -94,7 +94,8 @@ Vncviewer.translations:\
 
 *popup.translations: #override <Message>WM_PROTOCOLS: HidePopup()
 *popup.buttonForm.translations: #override\n\
-  <Key>Escape: SendRFBEvent() HidePopup()
+  <Key>Escape: SendRFBEvent() HidePopup()\n\
+  <Key>F4: Quit()
 
 
 !
@@ -107,7 +108,7 @@ Vncviewer.translations:\
 *popup*button1.translations: #override\n\
   <Btn1Down>,<Btn1Up>: HidePopup()
 
-*popup*button2.label: Quit viewer
+*popup*button2.label: Quit viewer (F4)
 *popup*button2.translations: #override\n\
   <Btn1Down>,<Btn1Up>: Quit()
 

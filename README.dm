@@ -190,7 +190,7 @@ GtkWidget::link-color
 GtkWidget::visited-link-color
 
 for skype: install gtk2-engine:i386
-
+for gtk3: Clearlools-phenix
 #Video & Imaging
 gimp
 inkscape
