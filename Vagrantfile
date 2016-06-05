@@ -74,7 +74,7 @@ Vagrant.configure(2) do |config|
   # specific per-VM configuration. Do not put this section in case you want to 
   # start your VMs on the same host)
   config.vm.provider :libvirt do |libvirt| 
-	libvirt.host = 'vaio' 
+	libvirt.host = 'targethostnameOrIP' 
 	libvirt.username = 'ubuntu' 
 	libvirt.connect_via_ssh = true 
 	libvirt.video_type = 'qxl'
