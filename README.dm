@@ -216,3 +216,14 @@ fc-match mono
 #Qt uses GTK theme
 export QT_STYLE_OVERRIDE=GTK+
 echo "style=GTK+" >> /etc/xdg/TrollTech.conf
+
+#Remove packages installed from deb's
+dpkg --get-selections | grep -i SOFTWARENAME >> list.txt
+sed -i 's/install/deinstall/g" list.txt
+sed -i 's/dedeinstall/deinstall/g' list.txt
+sudo cat list.txt | dpkg --set-selections
+sudo apt remove 'dpkg --get-selections | grep deinstall | cut -f1'
+sudo apt-get update && sudo apt-get upgrade
+
+#Search for rgb colors
+grep -nir '\#[[:xdigit:]]\{6\}'
