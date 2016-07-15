@@ -147,6 +147,9 @@ Vifm
 @xset -dpms
 @xset s noblank
 
+#mouse sensivity
+xset m 5 3
+
 #sync
 Rsync -avzcP --update -e ssh SOURCE DESTINATION
 
@@ -227,3 +230,25 @@ sudo apt-get update && sudo apt-get upgrade
 
 #Search for rgb colors
 grep -nir '\#[[:xdigit:]]\{6\}'
+
+#Trim mediafile 
+avconv -i inputFile -ss startTime -t durationTime -codec copy outputFile
+
+#gin volume(256=100%,1024=400%)
+avconv -vol 256 
+
+#Android screencast
+adb shell >screenrecord
+
+#Android screenshot
+adb shell >screencap
+
+#Record desctrop screencast with audio
+vlc -> screen:// pulse:// ( cvlc :screen-fps=1.000000 :input-slave=pulse:// :live-caching=300 :sout=#transcode{vcodec=h264,acodec=mpga,ab=128,channels=2,samplerate=44100}:file{dst=fileName.mp4} :sout-keep )
+
+#Extract image from video
+avconv -i yourVideo.avi -ss 00:00:00 -t 00:00:01 -frames 1 -f image2 ./output.png
+
+#Sleep & hibernate
+install pm-utilits
+pm-suspend
